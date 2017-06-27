@@ -25,10 +25,23 @@
 			<version>6.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 	</dependencies>
 	<build>
 		<finalName>olamundo-web</finalName>
 	</build>
-	
+
+	<repositories>
+		<repository>
+			<id>acme-nexus-snapshots</id>
+			<name>acme nexus</name>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
+			<id>acme-nexus-snapshots2</id>
+			<name>acme nexus</name>
+			<url>http://localhost:18081/nexus/content/repositories/snapshots/</url>
+		</repository>
+	</repositories>
+
 </project>
