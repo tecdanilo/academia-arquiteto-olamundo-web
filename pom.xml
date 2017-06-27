@@ -35,12 +35,12 @@
 		<repository>
 			<id>acme-nexus-snapshots</id>
 			<name>acme nexus</name>
-			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+			<url>http://localhost:8081/nexus/content/groups/public/</url>
 		</repository>
 		<repository>
 			<id>acme-nexus-snapshots2</id>
-			<name>acme nexus</name>
-			<url>http://localhost:18081/nexus/content/repositories/snapshots/</url>
+			<name>acme nexus2</name>
+			<url>http://localhost:18081/nexus/content/groups/public/</url>
 		</repository>
 	</repositories>
 
