@@ -15,7 +15,7 @@ public class TesteData {
 	
 	@Test
 	public void testAnoNaoBissexto() {
-		Data data = new Data(01,10,2002);
+		Data data = new Data(01,10,2000);
 		assertFalse("Sucesso",data.anoBissesto());
 	}
 
