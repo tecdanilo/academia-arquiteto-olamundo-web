@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.arquiteto.business.OlaMundo;
+import com.arquiteto.web.data.Data;
 
 /**
  * Servlet implementation class HelloServlet
@@ -29,11 +29,17 @@ public class HelloServlet extends HttpServlet {
 	}
 	
 	protected void doProcessRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nome = request.getParameter("nome");
+		String ano = request.getParameter("ano");
 		String retorno = "";
-		OlaMundo ola = new OlaMundo();
-		retorno = ola.olaMundo((nome != null ? nome : "anonimo"));
+
+		Data data = new Data(01,01,Integer.parseInt(ano));
 		
+		boolean ret = data.anoBissesto();
+		
+		if (ret)
+			retorno = "É ano bissexto";
+		else
+			retorno = "Não é ano bissexto";
 		
 		request.setAttribute("msg", retorno);
 		RequestDispatcher view = request.getRequestDispatcher("index.jsp");
